@@ -1,7 +1,7 @@
 package Task_1;
 
 import java.util.Scanner;
-
+//3)Write a program to find the given number is positive or negative
 public class Solution3 {
     public static void main(String[] args) {
         Scanner obj = new Scanner(System.in);
@@ -21,3 +21,4 @@ public class Solution3 {
         System.out.println(reverse);
     }
 }
+
