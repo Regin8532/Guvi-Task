@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class ProductMain {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        Product p[] =new Product[5];
+        Product products[] =new Product[5];
         for (int i = 0; i < 5; i++) {
             System.out.println("Enter the details of product "+ (i+1) +":");
             System.out.println("Enter Product ID :");
@@ -20,16 +20,16 @@ public class ProductMain {
             double price=sc.nextDouble();
             System.out.println("Enter Product quantity :");
             int quantity=sc.nextInt();
-            p[i]=new Product(pId,price,quantity);
+            products[i]=new Product(pId,price,quantity);
         }
-        Product highestPriceProduct=p[0];
+        Product highestPriceProduct= products[0];
         for (int i = 0; i < 5; i++) {
-            if(p[i].price>highestPriceProduct.price){
-                highestPriceProduct=p[i];
+            if(products[i].price>highestPriceProduct.price){
+                highestPriceProduct= products[i];
             }
         }
         System.out.println("The highest priced product's pID is :"+highestPriceProduct.pId);
-        System.out.println("Total amount of all the products is "+ totalAmount(p));
+        System.out.println("Total amount of all the products is "+ totalAmount(products));
     }
     static double totalAmount(Product p[]){
         double total=0;
