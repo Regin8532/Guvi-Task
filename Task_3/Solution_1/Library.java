@@ -33,7 +33,6 @@ class Library {
             if (books[i].getBookID() == bookID) {
                 System.out.println("Book found:");
                 books[i].display();
-                return;
             }
         }
     }
@@ -43,4 +42,5 @@ class Library {
             books[i].display();
         }
     }
+
 }
